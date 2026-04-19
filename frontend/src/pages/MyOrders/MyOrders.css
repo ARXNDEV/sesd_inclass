@@ -1,0 +1,120 @@
+.my-orders{
+    margin: 50px 0px;
+    animation: fadeIn 0.5s;
+}
+.my-orders h2 {
+    color: var(--text-main);
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: -0.5px;
+}
+.no-orders {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--surface-color);
+    border-radius: var(--radius-lg);
+    border: 1px dashed var(--border-color);
+    color: var(--text-muted);
+    font-size: 18px;
+    box-shadow: var(--shadow-sm);
+    margin-top: 20px;
+}
+.order-history-section {
+    margin-top: 60px;
+}
+
+.order-history-section h2 {
+    color: var(--text-secondary);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.history-order {
+    opacity: 0.7;
+    filter: grayscale(0.5);
+    transition: var(--transition-normal);
+}
+
+.history-order:hover {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+.delivered-dot {
+    color: #4caf50;
+}
+
+.reorder-btn {
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.reorder-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+.my-orders .container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+.my-orders-order{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr;
+    align-items: center;
+    gap: 30px;
+    font-size: 15px;
+    padding: 24px;
+    color: var(--text-muted);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    background: var(--surface-color);
+    transition: var(--transition-bounce);
+    box-shadow: var(--shadow-sm);
+}
+.my-orders-order:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+}
+.my-orders-order img{
+    width: 60px;
+}
+.my-orders-order p span{
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-right: 4px;
+}
+.my-orders-order p b{
+    font-weight: 700;
+    color: var(--text-main);
+}
+.my-orders-order button{
+    border: none;
+    padding: 14px 0px;
+    border-radius: var(--radius-sm);
+    background: var(--primary-light);
+    cursor: pointer;
+    color: var(--primary-color);
+    font-weight: 700;
+    transition: var(--transition-bounce);
+}
+.my-orders-order button:hover {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+}
+@media (max-width:900px) {
+    .my-orders-order{
+        grid-template-columns: 1fr 2fr 1fr;
+        row-gap: 15px;
+        font-size: 14px;
+        padding: 20px;
+    }
+    .my-orders-order button{
+        font-size: 14px;
+    }
+}
